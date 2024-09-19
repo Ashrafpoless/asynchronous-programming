@@ -12,7 +12,7 @@ import { ORIGIN } from '../config.js';
 export const evolutionChain = async (chainId = 1) => {
     // --- generate and declare your resource's URL ---
     // docs: https://pokeapi.co/docs/v2#evolution-section
-    const URL = _;
+    const URL = 'https://pokeapi.co/docs/v2#evolution-section';
 
     // --- fetch the API data (this works!) ---
     const encodedURL = encodeURI(URL);

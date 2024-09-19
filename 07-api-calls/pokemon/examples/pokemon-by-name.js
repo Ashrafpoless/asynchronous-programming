@@ -1,4 +1,5 @@
 import { labeledLogger } from '../../../lib/labeled-logger.js';
+import fetch from "node-fetch";
 
 import { ORIGIN } from '../config.js';
 
@@ -44,12 +45,12 @@ pokemonByName('pikachu')
     .then((data) => log('pikachu', data))
     .catch((err) => log('pikachu', err));
 
-pokemonByName('mew')
-    .then((data) => log('mew', data))
-    .catch((err) => log('mew', err));
+// pokemonByName('mew')
+//     .then((data) => log('mew', data))
+//     .catch((err) => log('mew', err));
 
-pokemonByName('lickitung')
-    .then((data) => log('lickitung', data))
-    .catch((err) => log('lickitung', err));
+// pokemonByName('lickitung')
+//     .then((data) => log('lickitung', data))
+//     .catch((err) => log('lickitung', err));
 
 log('= = = =  the call stack is empty  = = = =');

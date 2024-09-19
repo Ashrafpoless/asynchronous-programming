@@ -8,7 +8,11 @@ const { log } = labeledLogger();
  *
  * @async
  */
-const userWorksAt = async () => {};
+const userWorksAt = async (id, companyName) => {
+  const user= await fetchUserById(id);
+  const result = `${user.company.name}`
+  return result === companyName
+};
 
 describe('userWorksAt checks if a user works at a specific company', () => {
     it('user 4 does work at Robel-Corkery', async () => {

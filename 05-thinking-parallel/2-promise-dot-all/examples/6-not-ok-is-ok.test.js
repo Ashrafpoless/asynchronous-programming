@@ -20,10 +20,11 @@ const namesById = async (ids = []) => {
     const users = await Promise.all(userPromises);
 
     // create an array with each user's name or server-side error message
-    const names = users.map((user) =>
-        typeof user === 'string' ? user : `${user.id}. ${user.name}`,
-    );
-    return names;
+  //  const names = users.map((user) =>
+  //    typeof user === 'string' ? user : `${user.id}. ${user.name}`,
+  // );
+  // i doo this instead
+    return users.map((user) =>`${user.id}. ${user.name}`)
 };
 
 // --- --- tests --- ---
